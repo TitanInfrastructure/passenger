@@ -57,6 +57,7 @@ task 'test:install_deps' do
   end
 
   if !PlatformInfo.locate_ruby_tool('bundle') || bundler_too_old?
+    sh "gem uninstall bundler bundle rubygems-update --all -x && gem update --system 2.6.1 && gem install bundler && gem uninstall rubygems-update --all -x && gem update --system 2.6.4"
     # workaround for issue "bluecloth not found" when using 1.12.x
     #sh "#{gem_install} bundler --version 1.11.2"
   end
