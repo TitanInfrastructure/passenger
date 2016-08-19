@@ -58,7 +58,7 @@ task 'test:install_deps' do
 
   if !PlatformInfo.locate_ruby_tool('bundle') || bundler_too_old?
     # workaround for issue "bluecloth not found" when using 1.12.x
-    sh "#{gem_install} bundler --version 1.11.2"
+    #sh "#{gem_install} bundler --version 1.11.2"
   end
 
   if install_base_deps && install_doctools
