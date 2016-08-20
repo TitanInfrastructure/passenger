@@ -10,7 +10,7 @@ env:
   - TEST_SOURCE_PACKAGING=1
 
 before_install:
-  - 'gem uninstall bundler bundle rubygems-update --all -x && gem update --system 2.6.1 && gem install bundler && gem uninstall rubygems-update --all -x && gem update --system 2.6.4'
+  - 'gem uninstall bundler bundle rubygems-update --all -x && gem update --system 2.6.1 && gem install bundler --version 1.11.2 && gem uninstall rubygems-update --all -x && gem update --system 2.6.4'
   - 'gem --version'
   - 'bundle --version'
 install: "true"
